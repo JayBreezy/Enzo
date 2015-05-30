@@ -5,6 +5,16 @@ with open('testSeq.txt', 'r') as textfile: #open DNA seq as continuous string
 print 'Imported sequence:'
 print DNAseq #check
 
+aaDic = {} #empty dictionary 
+
+with open ('codon_table.txt') as txt: #open codon table
+    for line in txt:
+        try:
+            (key, value) = line.split()
+            aaDic[key] = value
+        except ValueError:
+            continue
+
 RNAseq = '' #empty string for RNAsequence
 
 def transcription(DNAstr): #transcribes DNA seq to mRNA seq
@@ -69,10 +79,11 @@ def codonChop2(RNAstr): #2 of 2 ways to segment into codons
         count += 3 #move through sequence by 3's
     return codonLst
 
-def translate(codonLst): #translates from codons to amino acids
-    '''Input list of codons. Output list of amino acids.'''
+def translate(codonLst, dic): #translates from codons to amino acids
+    '''Input list of codons and AA dictionary. Output list of amino acids.'''
+    aaLst = []
     for codon in codonLst:
-        aaLst.append(aaDic[codon]) #append dictonary value by codon index
+        aaLst.append(dic[codon]) #append dictonary value by codon index
     return aaLst
 
 DNAseq = findStart(DNAseq)
@@ -97,7 +108,7 @@ codonList = findStop(codonList)
 print 'codon list truncated:'
 print codonList
 
-aaList = translate(codonList)
+aaList = translate(codonList, aaDic)
 
 print 'aa list:'
 print aaList
