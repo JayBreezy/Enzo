@@ -1,0 +1,10 @@
+# Enzo is a project to simulate and explore biological processes and molecular machinery.
+
+The objective of simulation is to develop, refactor, and refine what we believe to be sufficient and necessary to produce specific behavior(s) within a specified scale and scope. While a general hope is to build an environment robust enough to reproduce all natural phenomenon within a given system, pragmatism begs that we isolate a small number of specific behaviors to target and iterate over them. 
+
+The key strength of this method is that, once a given phenomenon can be exhibited within predetermined constraints, we should expect that some separate arbitrary phenomenon can be exhibited with work proportional to the relatedness of the domain. Thus, by following a breadth-first approach within small, well-defined domains, and scaling to greater scope and detail, we hope to explore the heirarchy of principals at play within complex living systems. 
+
+Enzo consists of both large Unity3D projects, as well as small programs or scripts in Python or C-based languages. 
+
+Copyright 2015. All rights reserved.
+If interested in contributing, contact julianjhills@gmail.com or geurinza@umich.edu.
