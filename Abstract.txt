@@ -15,4 +15,4 @@ Enzo consists of both large Unity3D projects, as well as small programs or scrip
 languages. 
 
 Copyright 2015. All rights reserved.
-If interested in contributing, contact julianjhills@gmail.com or geurinza@umich.edu.
+If interested in contributing, contact julianjhills@gmail.com or geurinza@msu.edu.
